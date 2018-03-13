@@ -9,27 +9,15 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @SpringBootApplication
-public class DemoApplication {
+public class ApplicationConfig {
 
     @RequestMapping("/")
     @ResponseBody
-    String home() {
-      return "Hello World!";
-    }
-    
-    @RequestMapping("/patrick")
-    @ResponseBody
-    String patrick() {
-      return "patrick";
-    }
-    
-    @RequestMapping("/patrickView")
-    @ResponseBody
-    ModelAndView patrickView() {
-      return new ModelAndView("patrick");
+    ModelAndView view() {
+      return new ModelAndView("test");
     }
     
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(ApplicationConfig.class, args);
 	}
 }
