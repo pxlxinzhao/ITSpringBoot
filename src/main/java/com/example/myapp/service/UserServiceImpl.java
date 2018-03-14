@@ -40,6 +40,12 @@ public class UserServiceImpl implements UserService{
 		
 		userDao.addUser(user);
 	}
+
+	@Override
+	public void delete(Integer id) {
+		userDao.delete(id);
+		
+	}
 	
 
 }

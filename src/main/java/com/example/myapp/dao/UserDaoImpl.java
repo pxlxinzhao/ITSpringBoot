@@ -28,4 +28,9 @@ public class UserDaoImpl implements UserDao{
 	public void addUser(User user) {
 		entityManager.persist(user);
 	}
+
+	@Override
+	public void delete(Integer id) {
+		entityManager.remove(entityManager.find(User.class, id));
+	}
 }

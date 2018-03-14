@@ -10,4 +10,6 @@ public interface UserService {
 
 	void addFakeUser();
 
+	void delete(Integer id);
+
 }
