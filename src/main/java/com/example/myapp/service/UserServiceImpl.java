@@ -32,6 +32,11 @@ public class UserServiceImpl implements UserService{
 		user.setFirstName(faker.name().firstName());
 		user.setLastName(faker.name().lastName());
 		user.setAddress(faker.address().fullAddress());
+		user.setEmail(faker.internet().emailAddress());
+		user.setProfession(faker.company().profession());
+		user.setCompany(faker.company().name());
+		user.setCellPhone(faker.phoneNumber().cellPhone());
+		user.setUniversity(faker.educator().university());
 		
 		userDao.addUser(user);
 	}

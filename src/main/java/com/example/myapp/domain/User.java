@@ -31,6 +31,21 @@ public class User implements Serializable{
 	
 	@Column(name="address")
 	private String address;
+	
+	@Column(name="email")
+	private String email;
+	
+	@Column(name="profession")
+	private String profession;
+	
+	@Column(name="company")
+	private String company;
+	
+	@Column(name="cellPhone")
+	private String cellPhone;
+	
+	@Column(name="university")
+	private String university;
 
 	public int getId() {
 		return id;
@@ -72,9 +87,51 @@ public class User implements Serializable{
 		this.address = address;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getProfession() {
+		return profession;
+	}
+
+	public void setProfession(String profession) {
+		this.profession = profession;
+	}
+
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+	public String getCellPhone() {
+		return cellPhone;
+	}
+
+	public void setCellPhone(String cellPhone) {
+		this.cellPhone = cellPhone;
+	}
+
+	public String getUniversity() {
+		return university;
+	}
+
+	public void setUniversity(String university) {
+		this.university = university;
+	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", firstName=" + firstName + ", lastName=" + lastName
-				+ ", address=" + address + "]";
+				+ ", address=" + address + ", email=" + email + ", profession=" + profession + ", company=" + company
+				+ ", cellPhone=" + cellPhone + ", university=" + university + "]";
 	}
+	
 }
